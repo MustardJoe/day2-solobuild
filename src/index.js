@@ -21,8 +21,8 @@ submitButton.addEventListener('click', () => {
   
     const message = 'You got ' + score + '/5 correct';
     
-    if (score === 5) {
-    quizMsg.textContent = message + ' You are a good cat knower!';
+    if(score === 5) {
+        quizMsg.textContent = message + ' You are a good cat knower!';
     }
     else {
         quizMsg.textContent = message + ' but you missed at least one question.';

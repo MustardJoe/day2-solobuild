@@ -9,7 +9,7 @@ function quizResult(question1, question2, question3, question4, question5) {
     let score = 0;   
 
 
-    if(question1 === 'morris' ) {
+    if(question1 === 'morris') {
         score += 1;
     }
 
@@ -17,7 +17,7 @@ function quizResult(question1, question2, question3, question4, question5) {
         score += 1;
     }
 
-    if(question3 === 'black' ) {
+    if(question3 === 'black') {
         score += 1;
     }
 
@@ -29,7 +29,7 @@ function quizResult(question1, question2, question3, question4, question5) {
         score += 1;
     }
 
-   return score;
+    return score;
 
 }
 export default quizResult;
