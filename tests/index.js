@@ -1,4 +1,4 @@
-import quizResult from './src/app.js';
+import quizResult from '../src/app.js';
 const test = QUnit.test;
 
 
