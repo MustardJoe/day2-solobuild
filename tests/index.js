@@ -1,51 +1,23 @@
-import quizResult from '../src/app.js';
+import getHeadsOrTails from '../src/get-heads-or-tails.js';
 const test = QUnit.test;
 
+test('gets heads for less than .5', (assert) => {
+    // arrange
+    const number = .49;
+    const expected = 'heads';
 
+    // act
+    const result = getHeadsOrTails(number);
 
-test('all answers wrong', (assert) => {
-    //Arrange
-    // Set up your parameters and expectations
-    const question1 = '';
-    const question2 = '';
-    const question3 = '';
-    const question4 = '';
-    const question5 = '';
-    const expected = 0;
-
-    //Act 
-    const result = quizResult(question1, question2, question3, question4, question5);
-    // Call the function you're testing and set the result to a const
-
-    //Assert
+    // assert
     assert.equal(result, expected);
 });
 
-test('all answers right', (assert) => {
-    //Arrange
-    const question1 = 'morris';
-    const question2 = 'butter';
-    const question3 = 'black';
-    const question4 = 'coyote';
-    const question5 = 'crow';
-    const expected = 5;
-    //Act
-    const result = quizResult(question1, question2, question3, question4, question5);
-    //Assert
-    assert.equal(result, expected);
-});
+test('returns tails for equal or greater than .5', (assert) => {
+    const number = .5;
+    const expected = 'tails';
 
-test('does lowercase work correctly', (assert) => {
-    //Arrange
-    const question1 = 'Morris';
-    const question2 = 'Butter';
-    const question3 = 'BLACK';
-    const question4 = 'Coyote';
-    const question5 = 'cRow';
-    const expected = 5;
+    const result = getHeadsOrTails(number);
 
-    //Act
-    const result = quizResult(question1, question2, question3, question4, question5);
-    //Assert
     assert.equal(result, expected);
 });
